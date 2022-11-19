@@ -27,7 +27,7 @@ int maxArea(std::vector<int> &heights)
     // as long as left pointer is less than right pointer
     while (l < r)
     {
-        // if left pointer is short, then it forms a container
+        // if left line is short, then it forms a container
         if (heights[l] < heights[r])
         {
             // update max
