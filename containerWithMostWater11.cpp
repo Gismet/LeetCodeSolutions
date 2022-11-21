@@ -14,7 +14,7 @@ let's take this array of heights => heights = [1,8,6,2,5,4,8,3,7]
 the amount of water that containter formed by the 0th(technically first line) and 8th line is 1 * (8 - 0) = 8;
 Our containter is formed based on the shortest line. That's why we ignore the longest line.
 We find the amount of water the current container can hold and update our maximum.
-If the left line is sort, we increment left pointer, otherwise we decrement right pointer.
+If the left line is short, we increment left pointer, otherwise we decrement right pointer.
 Keep repeating this process as long as left pointer is less than right pointer
 */
 
@@ -27,7 +27,7 @@ int maxArea(std::vector<int> &heights)
     // as long as left pointer is less than right pointer
     while (l < r)
     {
-        // if left pointer is short, then it forms a container
+        // if left line is short, then it forms a container
         if (heights[l] < heights[r])
         {
             // update max
