@@ -8,6 +8,7 @@
 // Let's say we edges = [[0,1],[1,2],[2,0]], then edges[0] = [0,1] means there is an edges between vertex 0 and vertex 1
 // we have n vertices labeled from 0 to n - 1 inclusive
 // for example, for n = 3, we vertices 0, 1, 2
+// we want to find out if there is a valid path from source to destiantion
 
 bool BFS(std::vector<std::vector<int>> adjList, int source, int destination, std::vector<bool> &visited)
 {
