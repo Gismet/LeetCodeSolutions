@@ -2,6 +2,8 @@
 #include <vector>
 #include <string>
 
+// code is buggy
+
 void DFS(int node, std::vector<std::vector<int>> &adj, std::string labels, std::vector<int> &ans, std::vector<bool> &visited)
 {
     visited[node] = true;
