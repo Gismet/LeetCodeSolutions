@@ -1,2 +1,2 @@
 # LeetCodeSolutions
-One leetcode a day keeps boredom away
+One leetcode a day keeps boredom away.
