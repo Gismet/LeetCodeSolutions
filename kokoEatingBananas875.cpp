@@ -25,10 +25,10 @@ Return the minimum integer k such that she can eat all the bananas within h hour
     If we have more than 15 bananas totally, then however the bananas are distributed
     among the piles, Koko can't eat them all. That's pretty clear. So that forms
     the lower bound of Koko's bananas per hour to eat. Okay now let's define the upper bound
-    Examin the above input. If Koko decides to eat the maximum number
+    Examine the above input. If Koko decides to eat the maximum number
     of bananas out of all the piles, then it is sure that she can consume them all since
     the given time is more than or equal to the number of piles.
-    So if she eats 30 bananas per hour, then she can all the bananas within 5 hours
+    So if she eats 30 bananas per hour, then she can eat all the bananas within 5 hours
     regardless of the distribution of bananas across the piles. So that is the upper bound
 
     Then what we are going to do is to find the minimum eating speed (k) within this interval.
@@ -51,13 +51,15 @@ int minEatingSpeed(std::vector<int> piles, int h)
     double lowerBound = (std::ceil(sum / h));
     double upperBound = *(std::max_element(piles.begin(), piles.end()));
 
+    double totalHours;
+
     while (lowerBound < upperBound)
     {
-        sum = 0.0;
+        totalHours = 0.0;
         double mid = std::floor((upperBound + lowerBound) / 2);
         for (int pile : piles)
-            sum += std::ceil(pile / mid);
-        if (sum > h)
+            totalHours += std::ceil(pile / mid);
+        if (totalHours > h)
         {
             lowerBound = mid + 1;
         }
