@@ -18,7 +18,7 @@ Return the minimum integer k such that she can eat all the bananas within h hour
 /*
     piles = [30, 11, 23, 4, 10] h = 5
 
-    For Koko to eat all the bananas, we has to eat at least ceil(sum(piles) / h)
+    For Koko to eat all the bananas, she has to eat at least ceil(sum(piles) / h)
     bananas per hour. (sum(piles) is the sum of all the elements in the piles)
     Let's confirm that. Let's state a counterexample. For example, let's imagen
     that Koko eats 3 bananas per hour. Within 5 hours, Koko can eat at most 15 bananas
